@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&family=Noto+Serif+SC:wght@200;300;400;500;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* content holder */
+.showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+}
+
+/* index.html video */
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+/* index.html text */
+.text {
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+}
+
+.text h2 {
+  font-size: 5em;
+  font-weight: 800;
+  color: #fe2700;
+  text-transform: uppercase;
+  text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.text h3 {
+  margin-top: 20px;
+  font-size: 4em;
+  font-weight: 700;
+  color: #fe2700;
+  line-height: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.text a {
+  font-size: 2em;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  text-align: center; 
+}
+
+.text a:hover {
+  background: #fa8800;
+}
+
+/* index.html navbar */
+.nav {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.nav li {
+  text-align: center;
+}
+
+/* dropdown menu in index.html navbar */
+.dropdown {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* hidden by default */
+.dropdown-content {
+  top: -10px;
+  display: none;
+  position: absolute;
+}
+
+.dropdown-content a {
+  font-size: 1.3em;
+  display: block;
+}
+
+/* on hover, dropdown menu appears */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* on hover, dropdown button to enter menu disappears */
+.dropdown:hover .dropbtn {
+  transition: 0s;
+  opacity: 0;
+} 
+
+/* image background for text pages */
+.base {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  opacity: 0.8;
+}
+
+/* text for not index.html  */
+.about {
+  align-self: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  color: #111;
+  margin-top: 5vw;
+  border: 4px solid white;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.about h2 {
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fe2700;
+  max-width: 49vw;
+}
+
+.about p {
+  padding-top: 20px;
+  font-size: 1.4em;
+  font-weight: 300;
+  max-width: 50vw;
+  text-align: center;
+  margin: auto;
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+}
+
+/* automatic slideshow */
+.slide {
+  margin-left: auto;
+  margin-right: auto;
+  width: 38vw;
+  height: 23vw;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  border: 4px solid #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* individual slide */
+.slide > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+  animation: slide 20s infinite;
+  opacity: 0;
+}
+
+/* delay slides to make cycle */
+.slide > div:nth-child(2) {
+  animation-delay: 5s;
+}
+.slide > div:nth-child(3) {
+  animation-delay: 10s;
+}
+.slide > div:nth-child(4) {
+  animation-delay: 15s;
+}
+
+/* slide animation (fade in/out) */
+@keyframes slide {
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+}
+
+/* title area for samples.html */
+.title {
+  align-self: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 1;
+  flex-basis: 100%;
+  margin-top: 5%;
+}
+
+/* title for samples.html */
+.title h2 {
+  font-size: 5em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fe2700;
+}
+
+/* media flexbox */
+.media-sample {
+  flex-grow: 3;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  z-index: 1;
+  color: #fe2700;
+  border: 4px solid white;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* title for media */
+.media-sample h2 {
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* subtitles (categories) for media */
+.media-sample h3 {
+  font-size: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* arrows for media sliders */
+.media-sample a {
+  font-size: 2em;
+  padding: 10px 20px;
+  color: #fff;
+  transition: 0.5s;
+  opacity: 0.3;
+}
+
+.media-sample a:hover {
+  background: #fa8800;
+  opacity: 1;
+}
+
+.media-sample > div {
+  margin-top: 1vw;
+}
+
+/* flexbox for graphic design */
+.design-sample {
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-self: flex-start;
+  z-index: 1;
+  color: #fe2700;
+  border: 4px solid white;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* title for graphic design */
+.design-sample h2 {
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* arrows for graphic design sliders */
+.design-sample a {
+  font-size: 2em;
+  padding: 10px 20px;
+  color: #fff;
+  transition: 0.5s;
+  opacity: 0.3;
+}
+
+.design-sample a:hover {
+  background: #fa8800;
+  opacity: 1;
+}
+
+.design-sample > div {
+  margin-top: 1vw;
+}
+
+/* to separate media and design */
+.separater {
+  flex-grow: 0.5;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+/* to set category titles position */
+.half-page {
+  display: flex;
+  flex-basis: 40%;
+  margin: auto;
+  margin-left: 1%;
+}
+
+/* flexbox for each row of image slider */
+.slide-row {
+  display: flex;
+  margin-top: 2%;
+}
+
+.slide-row > div {
+  margin-right: 0;
+}
+
+/* slideshow container */
+.slideshow-container {
+  height: 10vw;
+  width: 20vw;
+  position: relative;
+  margin: auto;
+  border: 4px solid #fff;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* fix images to slide */
+.mySlides > div {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: absolute;
+}
+
+/* next & previous buttons */
+.prev, .next {
+  font-family: 'Zapf Dingbats';
+  cursor: pointer;
+  position: absolute;
+  top: 45%;
+  padding: 16px;
+  margin-top: -22px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* caption text */
+.captext {
+  display: flex;
+  color: #111;
+  font-size: 1.5em;
+  font-weight: 400;
+  position: absolute;
+  left: -18vw;
+  align-items: center;
+  justify-content: center;
+  max-width: 18vw;
+  text-align: center;
+}
+
+/* fading animation for sliders */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2vw 7vw;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 1.3em;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* contact form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  margin: auto;
+  transition: 1s;
+}
+
+input {
+  padding: 10px 15px;
+  margin: 8px 0;
+  width: 400px;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+input[type=text], input[type=textarea] {
+  font-size: inherit;
+}
+
+textarea {
+  height: 200px;
+  width: 400px;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: 2px solid white;
+  border-radius: 4px;
+  background-color: #fff;
+  resize: none;
+}
+
+button {
+  background-color: #111;
+  border: none;
+  padding: 10px 40px;
+  margin: 8px 0;
+  cursor: pointer;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #fff;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #fa8800;
+}
+
+/* smaller screens */
+@media (max-width: 991px) {
+  * {
+    font-size: 12px;
+  }
+
+  /* move items to top for space */
+  .showcase {
+    align-items: flex-start;
+  }
+
+  .text {
+    margin-top: 10vw;
+  }
+
+  .about {
+    margin-top: 10vw;
+  }
+
+  .title {
+    margin-top: 10vw;
+  }
+
+  /* vertical navbar */
+  .nav {
+    flex-direction: column;
+    margin-top: -5px;
+  }
+
+  /* space for list items */
+  .nav li {
+    margin-top: 40px;
+  }
+
+  .dropdown li {
+    margin-top: 0px;
+  }
+
+  .dropdown {
+    margin-top: 40px;
+  }
+
+  /* push services to bottom of list */
+  .nav div {
+    order: 1;
+  }
+
+  .slide { 
+    width: 60vw;
+    height: 40vw;
+  }
+
+  /* vertical samples */
+  #sample-show {
+    flex-direction: column;
+  }
+
+  /*centered samples */
+  .media-sample, .design-sample {
+    margin: auto;
+  }
+
+  .design-sample {
+    margin-top: 5vw;
+  }
+
+  /* larger image sliders */
+  .slideshow-container {
+    height: 50vw;
+    width: 80vw;
+  }
+
+  .captext {
+    max-width: none;
+    align-items: flex-start;
+    left: 0vw;
+    bottom: 7vw;
+  }
+  
+  /* vertical rows for image sliders (column) */
+  .slide-row {
+    flex-direction: column;
+    margin-top: 5vw;
+    align-items: center;
+  }
+
+  .slide-row h3 {
+    margin-bottom: 8vw;
+  }
+
+  #middle {
+    display: none;
+  }
+}
