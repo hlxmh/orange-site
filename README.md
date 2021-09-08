@@ -1,5 +1,5 @@
 # orange-site
-a website created for Orange Media Production Company, designed with specifications requested by client.
+a website created for Orange Visual Culture Co. Ltd., designed with specifications requested by client.
 
 - miscommunication with client led to the project being abandoned
 - site responds well to most resolutions and screen sizes
