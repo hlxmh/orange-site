@@ -1,6 +1,15 @@
-# orange-site
-a website created for Orange Visual Culture Co. Ltd., designed with specifications requested by client.
+# Orange Visual Culture
+A website created for Orange Visual Culture Co. Ltd., designed with specifications requested by client. This project was abandoned so the English side of the site still uses placeholder text.
 
-- miscommunication with client led to the project being abandoned
-- site responds well to most resolutions and screen sizes
-- english site can be accessed from the top right button but currently has placeholder text
+## [Demo](https://orangevisual.herokuapp.com/index_en.html)
+
+## Features
+
+### Responsive
+Site will scale well with most resolutions and screen sizes.
+
+### Dropdown
+The Services button, if hovered, will create a dropdown of more specific options.
+
+## Image Sliders
+Both automatic and manual image sliders were implemented in this project.
